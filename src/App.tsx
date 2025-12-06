@@ -13,6 +13,7 @@ import {
 import { SkillCard } from "./components/SkillCard";
 import { ContactForm } from "./components/ContactFrom";
 import { SocialLink } from "./components/SocialLink";
+import { SKILLS } from "./utils/constants";
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,7 +47,10 @@ export default function App() {
         }`}
       >
         <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
-          <div className="text-xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
+          <div
+            className="text-xl font-bold tracking-tight text-slate-100 flex items-center gap-2"
+            onClick={() => scrollToSection("hero")}
+          >
             <Terminal size={20} className="text-teal-400" />
             <span>
               Dev<span className="text-teal-400">Portfolio</span>.
@@ -110,7 +114,10 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center px-6 pt-20 relative overflow-hidden">
+      <section
+        id="hero"
+        className="min-h-screen flex flex-col justify-center px-6 pt-20 relative overflow-hidden"
+      >
         {/* Decorative background element */}
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
 
@@ -232,14 +239,9 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <SkillCard cardName="JavaScript" />
-            <SkillCard cardName="React" />
-            <SkillCard cardName="Node.js" />
-            <SkillCard cardName="TypeScript" />
-            <SkillCard cardName="Tailwind CSS" />
-            <SkillCard cardName="SQL / NoSQL" />
-            <SkillCard cardName="Git / GitHub" />
-            <SkillCard cardName="Docker" />
+            {SKILLS.map((skill) => (
+              <SkillCard key={skill} cardName={skill} />
+            ))}
           </div>
         </div>
       </section>
