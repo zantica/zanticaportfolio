@@ -4,13 +4,13 @@ import { useState } from "react";
 export const ContactForm = () => {
   const [status, setStatus] = useState("idle"); // idle, submitting, success
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("submitting");
     // Simular envío
     setTimeout(() => {
       setStatus("success");
-      e.target.reset();
+      (e.target as HTMLFormElement).reset();
       // Resetear estado después de 3 seg
       setTimeout(() => setStatus("idle"), 3000);
     }, 1500);
