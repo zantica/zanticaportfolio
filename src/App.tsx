@@ -40,11 +40,10 @@ export default function App() {
     <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-teal-500/30 selection:text-teal-200">
       {/* Navbar */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50 py-4"
-            : "bg-transparent py-6"
-        }`}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+          ? "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50 py-4"
+          : "bg-transparent py-6"
+          }`}
       >
         <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
           <div
@@ -128,17 +127,18 @@ export default function App() {
           <h1 className="text-5xl md:text-7xl font-bold text-slate-100 mb-6 tracking-tight">
             Zantica.
           </h1>
-          <h2 className="text-4xl md:text-6xl font-bold text-slate-400 mb-8 tracking-tight">
-            Desarrollo software bien pensado.
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-400 mb-8 tracking-tight">
+            Software Engineer | Fullstack & Accessibility Specialist
           </h2>
           <p className="max-w-xl text-lg text-slate-400 mb-10 leading-relaxed">
-            Me gusta construir cosas{" "}
+            Transformo ideas complejas en productos{" "}
             <span className="text-teal-400 font-semibold">
-              simples y fáciles de mantener
+              simples y mantenibles
             </span>
-            . Trabajo sobre todo con TypeScript, aplicando ideas como DDD, TDD y
-            arquitectura hexagonal, pero también disfruto explorar otras áreas
-            como el desarrollo de videojuegos en Godot o la aplicación de IA.
+            . Experto en el ecosistema TypeScript, utilizo metodologías como TDD y
+            Arquitectura Hexagonal para construir sistemas que perduran.
+            <br /><br />
+            Siempre en beta constante, explorando la integración de IA y los fundamentos del desarrollo de juegos en Godot.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-16">
@@ -193,22 +193,10 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2 space-y-4 text-slate-400 leading-relaxed">
               <p>
-                Hola! Soy un desarrollador apasionado por crear interfaces
-                limpias y eficientes. Mi interés en el desarrollo web comenzó
-                hace 4 años cuando decidí intentar editar temas personalizados y
-                desde entonces no he parado de aprender.
+                Apasionado por crear tecnología que no solo funcione, sino que sea accesible para todos. Como desarrollador Fullstack, disfruto resolviendo problemas complejos en todo el stack tecnológico, priorizando siempre un diseño limpio y una experiencia de usuario fluida.
               </p>
               <p>
-                Actualmente, mi enfoque principal es construir productos
-                accesibles e inclusivos y experiencias digitales para una
-                variedad de clientes. Tengo experiencia trabajando tanto en{" "}
-                <strong className="text-teal-400 font-normal">Startups</strong>{" "}
-                como en grandes corporaciones.
-              </p>
-              <p>
-                Cuando no estoy programando, suelo estar explorando nuevas
-                tecnologías en GitHub, moderando comunidades en Discord o
-                simplemente desconectando con un buen videojuego.
+                Mi experiencia profesional abarca diversos entornos, lo que me ha permitido desarrollar una visión integral del ciclo de vida de un producto. Fuera del código, contribuyo activamente al ecosistema tecnológico moderando comunidades y explorando nuevas herramientas en el open source. Entusiasta de los videojuegos y del aprendizaje continuo.
               </p>
             </div>
 
